@@ -186,3 +186,21 @@ All API inputs will be validated and sanitized to prevent common vulnerabilities
 - **Securing Payments:** Ensures safe handling of transactions, reducing the risk of fraud or theft.  
 - **Maintaining Trust:** Users are more likely to use the platform if they feel their information is safe.  
 - **Ensuring Platform Reliability:** Security measures protect the system from abuse, downtime, and malicious attacks.  
+
+
+## CI/CD Pipeline
+
+### What is CI/CD?
+Continuous Integration (CI) and Continuous Deployment/Delivery (CD) pipelines automate the process of building, testing, and deploying the application. With CI/CD, every code change is automatically integrated, tested, and deployed, ensuring faster development cycles and higher-quality releases.
+
+### Why It’s Important
+- **Consistency:** Ensures that every code change goes through the same build and test process.  
+- **Faster Delivery:** Automates deployments, reducing manual effort and speeding up feature releases.  
+- **Reliability:** Detects bugs early through automated testing, preventing broken code from reaching production.  
+- **Collaboration:** Helps teams work more efficiently by integrating changes continuously.  
+
+### Tools We Can Use
+- **GitHub Actions:** For automating workflows like testing and deployment directly from GitHub.  
+- **Docker:** For containerizing the app, ensuring consistent environments across development, testing, and production.  
+- **Jenkins / CircleCI:** As alternatives for advanced CI/CD automation.  
+- **Netlify / Vercel / AWS / Heroku:** For deploying the application to production environments.  
