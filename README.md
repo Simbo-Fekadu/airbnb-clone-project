@@ -1,5 +1,4 @@
-# airbnb-clone-project
-
+# Airbnb-clone-project
 # Team Roles for Backend Systems, Database Design, API Development, and Application Security
 
 This document outlines the key team roles involved in **backend systems**, **database design**, **API development**, and **application security**, based on insights from [ITRex Group Blog](https://itrexgroup.com/blog/#posts).
