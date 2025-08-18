@@ -77,3 +77,76 @@ This document outlines the key team roles involved in **backend systems**, **dat
 | **Application Security** | - Security Engineer  <br> - QA Engineer  <br> - Back-end Developer |
 
 ---
+
+
+
+## Database Design
+
+### Key Entities
+
+#### 1. Users
+- **Fields:**
+  - `id` (primary key)
+  - `name`
+  - `email`
+  - `password`
+  - `role` (guest or host)
+
+#### 2. Properties
+- **Fields:**
+  - `id` (primary key)
+  - `title`
+  - `description`
+  - `location`
+  - `price_per_night`
+  - `host_id` (foreign key → Users)
+
+#### 3. Bookings
+- **Fields:**
+  - `id` (primary key)
+  - `user_id` (foreign key → Users)
+  - `property_id` (foreign key → Properties)
+  - `check_in_date`
+  - `check_out_date`
+  - `status` (pending, confirmed, canceled)
+
+#### 4. Reviews
+- **Fields:**
+  - `id` (primary key)
+  - `user_id` (foreign key → Users)
+  - `property_id` (foreign key → Properties)
+  - `rating`
+  - `comment`
+
+#### 5. Payments
+- **Fields:**
+  - `id` (primary key)
+  - `booking_id` (foreign key → Bookings)
+  - `amount`
+  - `payment_date`
+  - `status` (paid, pending, failed)
+
+---
+
+### Relationships
+
+- A **User** can be a **Host** (list properties) or a **Guest** (book properties).  
+- A **User** can have multiple **Properties** (if host).  
+- A **Property** can have many **Bookings**.  
+- A **Booking** belongs to one **User** (guest) and one **Property**.  
+- A **Booking** has one **Payment**.  
+- A **Property** can have many **Reviews**.  
+- A **Review** is written by a **User** for a **Property**.  
+
+---
+
+### ER Diagram (Mermaid)
+
+```mermaid
+erDiagram
+    USERS ||--o{ PROPERTIES : owns
+    USERS ||--o{ BOOKINGS : makes
+    USERS ||--o{ REVIEWS : writes
+    PROPERTIES ||--o{ BOOKINGS : has
+    PROPERTIES ||--o{ REVIEWS : receives
+    BOOKINGS ||--|| PAYMENTS : generates
