@@ -140,13 +140,23 @@ This document outlines the key team roles involved in **backend systems**, **dat
 
 ---
 
-### ER Diagram (Mermaid)
+## Feature Breakdown
 
-```mermaid
-erDiagram
-    USERS ||--o{ PROPERTIES : owns
-    USERS ||--o{ BOOKINGS : makes
-    USERS ||--o{ REVIEWS : writes
-    PROPERTIES ||--o{ BOOKINGS : has
-    PROPERTIES ||--o{ REVIEWS : receives
-    BOOKINGS ||--|| PAYMENTS : generates
+### 1. User Management
+Allows users to sign up, log in, and manage their profiles. Hosts can list properties, while guests can book stays, ensuring clear role separation and secure authentication.
+
+### 2. Property Management
+Hosts can create, update, and manage property listings with details such as title, description, location, and price. This feature ensures guests have access to accurate and up-to-date information.
+
+### 3. Booking System
+Guests can book properties for specific dates, with status tracking (pending, confirmed, canceled). This feature handles availability checks and prevents double bookings.
+
+### 4. Payment Processing
+Integrates payments for bookings, storing transaction details and payment status. Ensures a smooth and secure financial flow between guests and hosts.
+
+### 5. Reviews & Ratings
+Guests can leave reviews and ratings for properties they’ve stayed in. This feature builds trust in the platform and helps future guests make informed decisions.
+
+### 6. Search & Filtering
+Allows users to search properties by location, price, availability, and other criteria. This ensures a seamless user experience when finding the right stay.
+
