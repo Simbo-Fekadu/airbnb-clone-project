@@ -160,3 +160,29 @@ Guests can leave reviews and ratings for properties they’ve stayed in. This fe
 ### 6. Search & Filtering
 Allows users to search properties by location, price, availability, and other criteria. This ensures a seamless user experience when finding the right stay.
 
+## API Security
+
+Securing the backend APIs is critical to ensure user trust, protect sensitive data, and maintain platform reliability. The following key measures will be implemented:
+
+### 1. Authentication
+All API endpoints will be protected using secure authentication mechanisms (e.g., JWT tokens). This ensures that only verified users can access the system and prevents unauthorized access.
+
+### 2. Authorization
+Role-based access control (RBAC) will be applied so that only hosts can manage properties, and only guests can make bookings. This prevents misuse of the system and enforces proper permissions across features.
+
+### 3. Data Protection
+Sensitive data such as passwords and payment details will be encrypted both at rest and in transit (using HTTPS and strong hashing algorithms like bcrypt). This prevents data leaks and protects user privacy.
+
+### 4. Rate Limiting
+APIs will include rate limiting to prevent abuse, such as denial-of-service (DoS) attacks or brute-force login attempts. This ensures platform stability and availability.
+
+### 5. Input Validation & Sanitization
+All API inputs will be validated and sanitized to prevent common vulnerabilities such as SQL injection, XSS, or command injection. This keeps the system safe from malicious requests.
+
+---
+
+### Why Security Matters for This Project
+- **Protecting User Data:** Prevents unauthorized access to personal information like names, emails, and passwords.  
+- **Securing Payments:** Ensures safe handling of transactions, reducing the risk of fraud or theft.  
+- **Maintaining Trust:** Users are more likely to use the platform if they feel their information is safe.  
+- **Ensuring Platform Reliability:** Security measures protect the system from abuse, downtime, and malicious attacks.  
